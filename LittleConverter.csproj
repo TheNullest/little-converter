@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>little.Converter</PackageId>
+    <Title>A Quick Converter For Some Types</Title>
+    <Authors>Moien MahmoudJanlou</Authors>
+    <Description>A high-speed C# library using the Apose.Cells C# library to convert many types of files to each other. This is a professional software solution to import and export XLS, XLSX , PNG, JPG, SVG, TXT, PDF, TIF, JSON, and many other formats on .NET Framework, .NET Core or Mono Platforms.</Description>
+    <PackageProjectUrl>https://github.com/TheNullest/little-converter</PackageProjectUrl>
+    <PackageIcon>1322164.png</PackageIcon>
+    <RepositoryUrl>https://github.com/TheNullest/little-converter</RepositoryUrl>
+    <PackageTags>Excel; XLS; XLSX; XLSB; CSV; to; PDF; JPG; PNG; HTML; ODS; Numbers; XLSM; OOXML; Spreadsheet; Markdown; XPS; DOCX; PPTX; MHTML; JSON; SVG; TIFF</PackageTags>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="~\**" />
+    <EmbeddedResource Remove="~\**" />
+    <None Remove="~\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspose.Cells" Version="23.9.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Assets\1322164.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
