@@ -20,7 +20,8 @@
   </metadata>
   <files>
     <file src="G:\.NET\LittleConverter\bin\Release\net7.0\LittleConverter.dll" target="lib\net7.0\LittleConverter.dll" />
+    <file src="G:\.NET\LittleConverter\Assets\1322164.png" target="\Assets\1322164.png" />
+    <file src="G:\.NET\LittleConverter\Assets\1322164.png" target="\1322164.png" />
     <file src="G:\.NET\LittleConverter\README.md" target="\README.md" />
-    <file src="E:\Downloads\1322164.png" target="\1322164.png" />
   </files>
 </package>

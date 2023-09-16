@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Little.Converter</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>A Quick Converter For Some Types</title>
     <authors>Moien MahmoudJanlou</authors>
     <icon>1322164.png</icon>

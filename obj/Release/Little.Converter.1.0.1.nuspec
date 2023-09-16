@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Little.Converter</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>A Quick Converter For Some Types</title>
     <authors>Moien MahmoudJanlou</authors>
     <icon>1322164.png</icon>
@@ -19,7 +19,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="G:\.NET\LittleConverter\bin\Debug\net7.0\LittleConverter.dll" target="lib\net7.0\LittleConverter.dll" />
+    <file src="G:\.NET\LittleConverter\bin\Release\net7.0\LittleConverter.dll" target="lib\net7.0\LittleConverter.dll" />
     <file src="G:\.NET\LittleConverter\Assets\1322164.png" target="\Assets\1322164.png" />
     <file src="G:\.NET\LittleConverter\Assets\1322164.png" target="\1322164.png" />
     <file src="G:\.NET\LittleConverter\README.md" target="\README.md" />

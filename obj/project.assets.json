@@ -544,10 +544,10 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "restore": {
       "projectUniqueName": "G:\\.NET\\LittleConverter\\LittleConverter.csproj",
-      "projectName": "little.Converter",
+      "projectName": "Little.Converter",
       "projectPath": "G:\\.NET\\LittleConverter\\LittleConverter.csproj",
       "packagesPath": "C:\\Users\\mpers\\.nuget\\packages\\",
       "outputPath": "G:\\.NET\\LittleConverter\\obj\\",

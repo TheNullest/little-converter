@@ -10,7 +10,7 @@ namespace SomeTypesConverter.Services
     /// It's only have one method : <c>ConvertItAsync</c> <para></para>
     /// to convert the selected file to the desired Type
     /// </summary>
-    public static class TypeConverter
+    public static class ConvertIt
     {
 	   /// <summary>
 	   /// 
@@ -36,30 +36,33 @@ namespace SomeTypesConverter.Services
 		  //~\wwwroot\ConvertedFiles\NewFolderName\JSON
 		  string convertedFilesRootPath = Path.Combine( wwwrootPath, "ConvertedFiles", convertRequest.ConvertedFilePath, convertRequest.ConvertToType.ToString() );
 		  string convertedFileSavePath = string.Empty;
-		  string basicFileExtension = Path.GetExtension( convertRequest.BaseFile.FileName.ToUpper() );
+		  string baseFileExtension = Path.GetExtension( convertRequest.BaseFile.FileName.ToUpper() );
 
 		  //~\wwwroot\BaselFiles\NewFolderName\XLSX
-		  string basicFilesPath = Path.Combine( wwwrootPath, "BaseFiles", convertRequest.ConvertedFilePath, basicFileExtension.TrimStart( '.' ) );
-		  string basicFileUploadPath = string.Empty;
+		  string baseFilesPath = Path.Combine( wwwrootPath, "BaseFiles", convertRequest.ConvertedFilePath, baseFileExtension.TrimStart( '.' ) );
+		  string baseFileUploadPath = string.Empty;
 
 		  //Set the new name to the converted file if the NewFilename property is set by the user
 		  if( !string.IsNullOrEmpty( convertRequest.NewFileName ) && !string.IsNullOrWhiteSpace( convertRequest.NewFileName ) )
 		  {
-			 basicFileUploadPath = Path.Combine( basicFilesPath, convertRequest.NewFileName + basicFileExtension );
-			 convertedFileSavePath = Path.Combine( convertedFilesRootPath, convertRequest.NewFileName + "." + convertRequest.ConvertToType.ToString().ToLower() );
+			 baseFileUploadPath = Path.Combine( baseFilesPath, convertRequest.NewFileName + baseFileExtension );
+			 convertedFileSavePath = Path.Combine( convertedFilesRootPath, convertRequest.NewFileName + convertRequest.ConvertToType.ToString().ToLower() );
 		  }
 		  //Otherwise, the same name as the base file will be used for the converted file
 		  else
 		  {
-			 basicFileUploadPath = Path.Combine( basicFilesPath, convertRequest.BaseFile.FileName + basicFileExtension );
-			 convertedFileSavePath = Path.Combine( convertedFilesRootPath, convertRequest.BaseFile.FileName + "." + convertRequest.ConvertToType.ToString().ToLower() );
+			 //IFormFile.FileName itself includes the file extension
+			 baseFileUploadPath = Path.Combine( baseFilesPath, convertRequest.BaseFile.FileName );
+
+			 int indextOfDot = convertRequest.BaseFile.FileName.IndexOf( '.' );
+			 convertedFileSavePath = Path.Combine( convertedFilesRootPath, convertRequest.BaseFile.FileName.Remove( indextOfDot ) + "." + convertRequest.ConvertToType.ToString().ToLower() );
 		  }
 
 		  if( convertRequest.UploadBaseFile )
 		  {
-			 if( !Directory.Exists( basicFilesPath ) )
-				Directory.CreateDirectory( basicFilesPath );
-			 using( FileStream stream = new FileStream( basicFileUploadPath, FileMode.Create ) )
+			 if( !Directory.Exists( baseFilesPath ) )
+				Directory.CreateDirectory( baseFilesPath );
+			 using( FileStream stream = new FileStream( baseFileUploadPath, FileMode.Create ) )
 			 {
 				await convertRequest.BaseFile.CopyToAsync( stream );
 			 }

@@ -1,19 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PackageId>Little.Converter</PackageId>
-    <Title>A Quick Converter For Some Types</Title>
-    <Authors>Moien MahmoudJanlou</Authors>
-    <Description>A high-speed C# library using the Apose.Cells C# library to convert many types of files to each other. This is a professional software solution to import and export XLS, XLSX , PNG, JPG, SVG, TXT, PDF, TIF, JSON, and many other formats on .NET Framework, .NET Core or Mono Platforms.</Description>
-    <PackageProjectUrl>https://github.com/TheNullest/little-converter</PackageProjectUrl>
-    <PackageIcon>1322164.png</PackageIcon>
-    <RepositoryUrl>https://github.com/TheNullest/little-converter</RepositoryUrl>
-    <PackageTags>Excel; XLS; XLSX; XLSB; CSV; to; PDF; JPG; PNG; HTML; ODS; Numbers; XLSM; OOXML; Spreadsheet; Markdown; XPS; DOCX; PPTX; MHTML; JSON; SVG; TIFF</PackageTags>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
+      <PackageId>Little.Converter</PackageId>
+      <Title>A Quick Converter For Some Types</Title>
+      <Authors>Moien MahmoudJanlou</Authors>
+      <Description>A high-speed C# library using the Apose.Cells C# library to convert many types of files to each other. This is a professional software solution to import and export XLS, XLSX , PNG, JPG, SVG, TXT, PDF, TIF, JSON, and many other formats on .NET Framework, .NET Core or Mono Platforms.</Description>
+      <PackageProjectUrl>https://github.com/TheNullest/little-converter</PackageProjectUrl>
+      <PackageIcon>1322164.png</PackageIcon>
+      <RepositoryUrl>https://github.com/TheNullest/little-converter</RepositoryUrl>
+      <PackageTags>Excel; XLS; XLSX; XLSB; CSV; to; PDF; JPG; PNG; HTML; ODS; Numbers; XLSM; OOXML; Spreadsheet; Markdown; XPS; DOCX; PPTX; MHTML; JSON; SVG; TIFF</PackageTags>
+      <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+      <PackageReadmeFile>README.md</PackageReadmeFile>
+      <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,59 +25,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="obj\Debug\net7.0\.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" />
-    <Compile Include="obj\Debug\net7.0\LittleConverter.AssemblyInfo.cs" />
-    <Compile Include="obj\Debug\net7.0\LittleConverter.GlobalUsings.g.cs" />
-    <Compile Include="obj\Release\net7.0\.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" />
-    <Compile Include="obj\Release\net7.0\LittleConverter.AssemblyInfo.cs" />
-    <Compile Include="obj\Release\net7.0\LittleConverter.GlobalUsings.g.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="bin\Debug\net7.0\LittleConverter.deps.json" />
-    <Content Include="bin\Release\net7.0\LittleConverter.deps.json" />
-    <Content Include="obj\Debug\net7.0\LittleConverter.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\LittleConverter.csproj.nuget.dgspec.json" />
-    <Content Include="obj\project.assets.json" />
-    <Content Include="obj\Release\net7.0\LittleConverter.csproj.FileListAbsolute.txt" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="bin\Debug\little.Converter.1.0.0.nupkg" />
-    <None Include="bin\Debug\net7.0\LittleConverter.dll" />
-    <None Include="bin\Debug\net7.0\LittleConverter.pdb" />
-    <None Include="bin\Release\little.Converter.1.0.0.nupkg" />
-    <None Include="bin\Release\net7.0\LittleConverter.dll" />
-    <None Include="bin\Release\net7.0\LittleConverter.pdb" />
-    <None Include="E:\Downloads\1322164.png">
+    <None Include="Assets\1322164.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Include="obj\Debug\little.Converter.1.0.0.nuspec" />
-    <None Include="obj\Debug\net7.0\LittleConverter.AssemblyInfoInputs.cache" />
-    <None Include="obj\Debug\net7.0\LittleConverter.assets.cache" />
-    <None Include="obj\Debug\net7.0\LittleConverter.csproj.AssemblyReference.cache" />
-    <None Include="obj\Debug\net7.0\LittleConverter.csproj.CoreCompileInputs.cache" />
-    <None Include="obj\Debug\net7.0\LittleConverter.dll" />
-    <None Include="obj\Debug\net7.0\LittleConverter.GeneratedMSBuildEditorConfig.editorconfig" />
-    <None Include="obj\Debug\net7.0\LittleConverter.pdb" />
-    <None Include="obj\Debug\net7.0\refint\LittleConverter.dll" />
-    <None Include="obj\Debug\net7.0\ref\LittleConverter.dll" />
-    <None Include="obj\LittleConverter.csproj.nuget.g.props" />
-    <None Include="obj\LittleConverter.csproj.nuget.g.targets" />
-    <None Include="obj\project.nuget.cache" />
-    <None Include="obj\Release\little.Converter.1.0.0.nuspec" />
-    <None Include="obj\Release\net7.0\LittleConverter.AssemblyInfoInputs.cache" />
-    <None Include="obj\Release\net7.0\LittleConverter.assets.cache" />
-    <None Include="obj\Release\net7.0\LittleConverter.csproj.AssemblyReference.cache" />
-    <None Include="obj\Release\net7.0\LittleConverter.csproj.CoreCompileInputs.cache" />
-    <None Include="obj\Release\net7.0\LittleConverter.dll" />
-    <None Include="obj\Release\net7.0\LittleConverter.GeneratedMSBuildEditorConfig.editorconfig" />
-    <None Include="obj\Release\net7.0\LittleConverter.pdb" />
-    <None Include="obj\Release\net7.0\refint\LittleConverter.dll" />
-    <None Include="obj\Release\net7.0\ref\LittleConverter.dll" />
   </ItemGroup>
 
+ 
   <ItemGroup>
     <PackageReference Include="Aspose.Cells" Version="23.9.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
