@@ -1,0 +1,12 @@
+G:\.NET\LittleConverter\bin\Release\net7.0\LittleConverter.deps.json
+G:\.NET\LittleConverter\bin\Release\net7.0\LittleConverter.dll
+G:\.NET\LittleConverter\bin\Release\net7.0\LittleConverter.pdb
+G:\.NET\LittleConverter\obj\Release\net7.0\LittleConverter.csproj.AssemblyReference.cache
+G:\.NET\LittleConverter\obj\Release\net7.0\LittleConverter.GeneratedMSBuildEditorConfig.editorconfig
+G:\.NET\LittleConverter\obj\Release\net7.0\LittleConverter.AssemblyInfoInputs.cache
+G:\.NET\LittleConverter\obj\Release\net7.0\LittleConverter.AssemblyInfo.cs
+G:\.NET\LittleConverter\obj\Release\net7.0\LittleConverter.csproj.CoreCompileInputs.cache
+G:\.NET\LittleConverter\obj\Release\net7.0\LittleConverter.dll
+G:\.NET\LittleConverter\obj\Release\net7.0\refint\LittleConverter.dll
+G:\.NET\LittleConverter\obj\Release\net7.0\LittleConverter.pdb
+G:\.NET\LittleConverter\obj\Release\net7.0\ref\LittleConverter.dll

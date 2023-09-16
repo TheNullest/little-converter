@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Little.Converter</id>
+    <version>1.0.0</version>
+    <title>A Quick Converter For Some Types</title>
+    <authors>Moien MahmoudJanlou</authors>
+    <icon>1322164.png</icon>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/TheNullest/little-converter</projectUrl>
+    <description>A high-speed C# library using the Apose.Cells C# library to convert many types of files to each other. This is a professional software solution to import and export XLS, XLSX , PNG, JPG, SVG, TXT, PDF, TIF, JSON, and many other formats on .NET Framework, .NET Core or Mono Platforms.</description>
+    <tags>Excel XLS XLSX XLSB CSV to PDF JPG PNG HTML ODS Numbers XLSM OOXML Spreadsheet Markdown XPS DOCX PPTX MHTML JSON SVG TIFF</tags>
+    <repository url="https://github.com/TheNullest/little-converter" />
+    <dependencies>
+      <group targetFramework="net7.0">
+        <dependency id="Aspose.Cells" version="23.9.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Http.Features" version="5.0.17" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="G:\.NET\LittleConverter\bin\Release\net7.0\LittleConverter.dll" target="lib\net7.0\LittleConverter.dll" />
+    <file src="G:\.NET\LittleConverter\README.md" target="\README.md" />
+    <file src="E:\Downloads\1322164.png" target="\1322164.png" />
+  </files>
+</package>

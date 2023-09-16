@@ -23,10 +23,57 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="obj\Debug\net7.0\.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\net7.0\LittleConverter.AssemblyInfo.cs" />
+    <Compile Include="obj\Debug\net7.0\LittleConverter.GlobalUsings.g.cs" />
+    <Compile Include="obj\Release\net7.0\.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Release\net7.0\LittleConverter.AssemblyInfo.cs" />
+    <Compile Include="obj\Release\net7.0\LittleConverter.GlobalUsings.g.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="bin\Debug\net7.0\LittleConverter.deps.json" />
+    <Content Include="bin\Release\net7.0\LittleConverter.deps.json" />
+    <Content Include="obj\Debug\net7.0\LittleConverter.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\LittleConverter.csproj.nuget.dgspec.json" />
+    <Content Include="obj\project.assets.json" />
+    <Content Include="obj\Release\net7.0\LittleConverter.csproj.FileListAbsolute.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\little.Converter.1.0.0.nupkg" />
+    <None Include="bin\Debug\net7.0\LittleConverter.dll" />
+    <None Include="bin\Debug\net7.0\LittleConverter.pdb" />
+    <None Include="bin\Release\little.Converter.1.0.0.nupkg" />
+    <None Include="bin\Release\net7.0\LittleConverter.dll" />
+    <None Include="bin\Release\net7.0\LittleConverter.pdb" />
     <None Include="E:\Downloads\1322164.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+    <None Include="obj\Debug\little.Converter.1.0.0.nuspec" />
+    <None Include="obj\Debug\net7.0\LittleConverter.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\net7.0\LittleConverter.assets.cache" />
+    <None Include="obj\Debug\net7.0\LittleConverter.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\net7.0\LittleConverter.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\net7.0\LittleConverter.dll" />
+    <None Include="obj\Debug\net7.0\LittleConverter.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\Debug\net7.0\LittleConverter.pdb" />
+    <None Include="obj\Debug\net7.0\refint\LittleConverter.dll" />
+    <None Include="obj\Debug\net7.0\ref\LittleConverter.dll" />
+    <None Include="obj\LittleConverter.csproj.nuget.g.props" />
+    <None Include="obj\LittleConverter.csproj.nuget.g.targets" />
+    <None Include="obj\project.nuget.cache" />
+    <None Include="obj\Release\little.Converter.1.0.0.nuspec" />
+    <None Include="obj\Release\net7.0\LittleConverter.AssemblyInfoInputs.cache" />
+    <None Include="obj\Release\net7.0\LittleConverter.assets.cache" />
+    <None Include="obj\Release\net7.0\LittleConverter.csproj.AssemblyReference.cache" />
+    <None Include="obj\Release\net7.0\LittleConverter.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Release\net7.0\LittleConverter.dll" />
+    <None Include="obj\Release\net7.0\LittleConverter.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\Release\net7.0\LittleConverter.pdb" />
+    <None Include="obj\Release\net7.0\refint\LittleConverter.dll" />
+    <None Include="obj\Release\net7.0\ref\LittleConverter.dll" />
   </ItemGroup>
 
   <ItemGroup>
