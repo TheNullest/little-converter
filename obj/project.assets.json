@@ -544,7 +544,7 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "1.0.1",
+    "version": "1.0.1.1",
     "restore": {
       "projectUniqueName": "G:\\.NET\\LittleConverter\\LittleConverter.csproj",
       "projectName": "Little.Converter",

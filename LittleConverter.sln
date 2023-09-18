@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LittleConverter", "LittleConverter.csproj", "{385ADDE7-8B49-4AF9-9A68-9EFB84925F61}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "..\WebApplication1\WebApplication1.csproj", "{6AA3A1F2-8E33-4FE6-86B9-8E3B61EF4EBE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{385ADDE7-8B49-4AF9-9A68-9EFB84925F61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{385ADDE7-8B49-4AF9-9A68-9EFB84925F61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{385ADDE7-8B49-4AF9-9A68-9EFB84925F61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AA3A1F2-8E33-4FE6-86B9-8E3B61EF4EBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AA3A1F2-8E33-4FE6-86B9-8E3B61EF4EBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AA3A1F2-8E33-4FE6-86B9-8E3B61EF4EBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AA3A1F2-8E33-4FE6-86B9-8E3B61EF4EBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

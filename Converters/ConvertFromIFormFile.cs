@@ -4,37 +4,35 @@ using Aspose.Cells;
 
 using LittleConverter.Models;
 
-namespace SomeTypesConverter.Services
+using Microsoft.AspNetCore.Http;
+
+namespace LittleConverter.Converters
 {
     /// <summary>
     /// It's only have one method : <c>ConvertItAsync</c> <para></para>
     /// to convert the selected file to the desired Type
     /// </summary>
-    public static class ConvertIt
+    public static class ConvertFromIFormFile
     {
 	   /// <summary>
-	   /// 
+	   /// asdfsdfasdfasd
 	   /// </summary>
 	   /// <param name="convertRequest"></param>
-	   /// <returns>string as json file</returns>
+	   /// <returns>String as Json file</returns>
 	   public static async Task<string> ConvertItAsync( ConvertRequest convertRequest )
 	   {
+		  SaveFormat saveType = Enum.GetValues( typeof( SaveFormat ) ).OfType<SaveFormat>()
+									   .FirstOrDefault( x => x.ToString() == convertRequest.SaveFormat.ToString() );
 		  if( !convertRequest.SaveConvertedFile )
 		  {
-			 using( Stream fileStream = convertRequest.BaseFile.OpenReadStream() )
-			 {
-				Workbook workbook = new Workbook( fileStream );
-				MemoryStream mStream = new MemoryStream();
-				workbook.Save( mStream, saveFormat: SaveFormat.Json );
-				return Encoding.ASCII.GetString( mStream.ToArray() );
-			 }
+			 return ConvertTo( convertRequest.BaseFile, string.Empty, saveType );
 		  }
 
 		  //~\wwwroot
 		  string wwwrootPath = Path.Combine( Directory.GetCurrentDirectory(), "wwwroot" );
 
 		  //~\wwwroot\ConvertedFiles\NewFolderName\JSON
-		  string convertedFilesRootPath = Path.Combine( wwwrootPath, "ConvertedFiles", convertRequest.ConvertedFilePath, convertRequest.ConvertToType.ToString() );
+		  string convertedFilesRootPath = Path.Combine( wwwrootPath, "ConvertedFiles", convertRequest.ConvertedFilePath, convertRequest.SaveFormat.ToString() );
 		  string convertedFileSavePath = string.Empty;
 		  string baseFileExtension = Path.GetExtension( convertRequest.BaseFile.FileName.ToUpper() );
 
@@ -46,7 +44,7 @@ namespace SomeTypesConverter.Services
 		  if( !string.IsNullOrEmpty( convertRequest.NewFileName ) && !string.IsNullOrWhiteSpace( convertRequest.NewFileName ) )
 		  {
 			 baseFileUploadPath = Path.Combine( baseFilesPath, convertRequest.NewFileName + baseFileExtension );
-			 convertedFileSavePath = Path.Combine( convertedFilesRootPath, convertRequest.NewFileName + convertRequest.ConvertToType.ToString().ToLower() );
+			 convertedFileSavePath = Path.Combine( convertedFilesRootPath, convertRequest.NewFileName );
 		  }
 		  //Otherwise, the same name as the base file will be used for the converted file
 		  else
@@ -55,7 +53,7 @@ namespace SomeTypesConverter.Services
 			 baseFileUploadPath = Path.Combine( baseFilesPath, convertRequest.BaseFile.FileName );
 
 			 int indextOfDot = convertRequest.BaseFile.FileName.IndexOf( '.' );
-			 convertedFileSavePath = Path.Combine( convertedFilesRootPath, convertRequest.BaseFile.FileName.Remove( indextOfDot ) + "." + convertRequest.ConvertToType.ToString().ToLower() );
+			 convertedFileSavePath = Path.Combine( convertedFilesRootPath, convertRequest.BaseFile.FileName.Remove( indextOfDot ) );
 		  }
 
 		  if( convertRequest.UploadBaseFile )
@@ -71,13 +69,28 @@ namespace SomeTypesConverter.Services
 		  if( !Directory.Exists( convertedFilesRootPath ) )
 			 Directory.CreateDirectory( convertedFilesRootPath );
 
+		  ConvertTo( convertRequest.BaseFile, convertedFileSavePath, saveType );
+		  return File.ReadAllText( convertedFileSavePath );
+	   }
 
-		  using( Stream fileStream = convertRequest.BaseFile.OpenReadStream() )
+	   private static string ConvertTo( IFormFile baseFile, string convertedFileSavePath, SaveFormat saveType )
+	   {
+		  if( string.IsNullOrEmpty( convertedFileSavePath ) )
+			 using( Stream fileStream = baseFile.OpenReadStream() )
+			 {
+				Workbook workbook = new Workbook( fileStream );
+				MemoryStream mStream = new MemoryStream();
+
+				workbook.Save( mStream, saveType );
+				return Encoding.UTF8.GetString( mStream.ToArray() );
+			 }
+
+		  using( Stream fileStream = baseFile.OpenReadStream() )
 		  {
 			 Workbook workbook = new Workbook( fileStream );
-			 workbook.Save( convertedFileSavePath );
+			 workbook.Save( convertedFileSavePath + saveType.ToString().ToLower() );
 		  }
-		  return File.ReadAllText( convertedFileSavePath );
+		  return string.Empty;
 	   }
     }
 }

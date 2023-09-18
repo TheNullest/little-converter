@@ -10,7 +10,7 @@ namespace LittleConverter.Models
 	   public string? NewFileName { get; set; }
 
 	   [Required]
-	   public ConvertToType ConvertToType { get; set; }
+	   public SaveFormats SaveFormat { get; set; }
 
 	   [Required]
 	   public string ConvertedFilePath { get; set; }

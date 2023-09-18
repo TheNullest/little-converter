@@ -1,0 +1,56 @@
+﻿using System.Text.Json.Serialization;
+
+namespace LittleConverter.Models
+{
+    [JsonConverter( typeof( JsonStringEnumConverter ) )]
+    public enum SaveFormats
+    {
+	   Auto = 0,
+	   Csv = 1,
+	   CSV = 1,
+	   Excel97To2003 = 5,
+	   Xlsx = 6,
+	   Xlsm = 7,
+	   Xltx = 8,
+	   Xltm = 9,
+	   Xlam = 10,
+	   Tsv = 11,
+	   TSV = 11,
+	   TabDelimited = 11,
+	   Html = 12,
+	   Pdf = 13,
+	   Ods = 14,
+	   ODS = 14,
+	   SpreadsheetML = 15,
+	   Xlsb = 16,
+	   MHtml = 17,
+	   Xps = 20,
+	   XPS = 20,
+	   Tiff = 21,
+	   TIFF = 21,
+	   Svg = 28,
+	   SVG = 28,
+	   Dif = 30,
+	   Ots = 31,
+	   Xlt = 32,
+	   Xml = 51,
+	   Numbers = 56,
+	   Markdown = 57,
+	   Fods = 59,
+	   FODS = 59,
+	   Sxc = 60,
+	   SXC = 60,
+	   Pptx = 61,
+	   Docx = 62,
+	   Unknown = 255,
+	   Emf = 258,
+	   Jpg = 261,
+	   Png = 262,
+	   Bmp = 263,
+	   Gif = 322,
+	   Json = 513,
+	   SqlScript = 514,
+	   XHtml = 771,
+	   Epub = 772
+    }
+}

@@ -15,7 +15,7 @@
       <PackageTags>Excel; XLS; XLSX; XLSB; CSV; to; PDF; JPG; PNG; HTML; ODS; Numbers; XLSM; OOXML; Spreadsheet; Markdown; XPS; DOCX; PPTX; MHTML; JSON; SVG; TIFF</PackageTags>
       <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
       <PackageReadmeFile>README.md</PackageReadmeFile>
-      <Version>1.0.1</Version>
+      <Version>1.0.1.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
